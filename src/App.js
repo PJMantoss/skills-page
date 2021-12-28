@@ -1,4 +1,3 @@
-import EmployeeCard from './components/EmployeeCard';
 import Header from './components/Header';
 import SearchEmployees from './components/SearchEmployees';
 import Footer from './components/Footer';
@@ -9,7 +8,6 @@ function App() {
     <div className="App">
       <Header />
       <SearchEmployees />
-      <EmployeeCard />
       <Footer />
     </div>
   );

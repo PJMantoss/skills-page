@@ -69,9 +69,7 @@ export default function SearchEmployees(){
                 </FormControl>
             </form>
             <Box>
-                {employee[0].name}
-                {<img src={'https://res.cloudinary.com/torre-technologies-co/image/upload/v0/origin/starrgate/users/profile_bd307a3ec329e10a2cff8fb87480823da114f8f4.jpg'} />}
-                {}
+                <EmployeeCard employee={employee} />
             </Box>
         </>
     )

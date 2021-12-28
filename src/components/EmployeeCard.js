@@ -34,7 +34,7 @@ import {
             <Avatar
               size={'xl'}
               src={
-                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+                'https://res.cloudinary.com/torre-technologies-co/image/upload/v0/origin/starrgate/users/profile_bd307a3ec329e10a2cff8fb87480823da114f8f4.jpg'
               }
               alt={'Author'}
               css={{
@@ -46,22 +46,22 @@ import {
           <Box p={6}>
             <Stack spacing={0} align={'center'} mb={5}>
               <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                 {employee[0].name}
+                {employee[0].name}
               </Heading>
-              <Text color={'gray.500'}>Frontend Developer</Text>
+              <Text color={'gray.500'}>{employee[0].professionalHeadline}</Text>
             </Stack>
   
-            <Stack direction={'row'} justify={'center'} spacing={6}>
+            <Stack direction={'column'} justify={'center'} spacing={6}>
               <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>Skills</Text>
+                <Text fontWeight={600}>Summary</Text>
                 <Text fontSize={'sm'} color={'gray.500'}>
-                  App Development, Project Management
+                   {employee[0].summaryOfBio}
                 </Text>
               </Stack>
               <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>Proficiency</Text>
+                <Text fontWeight={600}>Skills</Text>
                 <Text fontSize={'sm'} color={'gray.500'}>
-                  Unit Testing, Data Analysis
+                   {employee[2].slice(0, 5)}
                 </Text>
               </Stack>
             </Stack>
