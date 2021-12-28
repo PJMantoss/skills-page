@@ -53,15 +53,15 @@ import {
   
             <Stack direction={'row'} justify={'center'} spacing={6}>
               <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>23k</Text>
+                <Text fontWeight={600}>Skills</Text>
                 <Text fontSize={'sm'} color={'gray.500'}>
-                  Followers
+                  App Development, Project Management
                 </Text>
               </Stack>
               <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>23k</Text>
+                <Text fontWeight={600}>Proficiency</Text>
                 <Text fontSize={'sm'} color={'gray.500'}>
-                  Followers
+                  Unit Testing, Data Analysis
                 </Text>
               </Stack>
             </Stack>
@@ -76,7 +76,7 @@ import {
                 transform: 'translateY(-2px)',
                 boxShadow: 'lg',
               }}>
-              Follow
+              Learn More
             </Button>
           </Box>
         </Box>
