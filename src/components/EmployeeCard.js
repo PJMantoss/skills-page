@@ -12,7 +12,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   
-  export default function EmployeeCard() {
+  export default function EmployeeCard({employee}) {
     return (
       <Center py={6}>
         <Box
@@ -26,7 +26,7 @@ import {
             h={'120px'}
             w={'full'}
             src={
-              'https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+              'https://res.cloudinary.com/torre-technologies-co/image/upload/v0/origin/starrgate/users/profile_bd307a3ec329e10a2cff8fb87480823da114f8f4.jpg'
             }
             objectFit={'cover'}
           />
@@ -46,7 +46,7 @@ import {
           <Box p={6}>
             <Stack spacing={0} align={'center'} mb={5}>
               <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                John Doe
+                 {employee[0].name}
               </Heading>
               <Text color={'gray.500'}>Frontend Developer</Text>
             </Stack>
