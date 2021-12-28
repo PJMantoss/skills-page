@@ -1,20 +1,16 @@
 import EmployeeCard from './components/EmployeeCard';
+import Header from './components/Header';
+import SearchEmployees from './components/SearchEmployees';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Header
-        </a>
-      </header>
-      <EmployeeCard/>
+      <Header />
+      <SearchEmployees />
+      <EmployeeCard />
+      <Footer />
     </div>
   );
 }
