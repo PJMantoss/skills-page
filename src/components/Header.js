@@ -84,11 +84,13 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={'gray.900'}
               href={'#'}
               _hover={{
-                bg: 'pink.300',
-              }}>
+                bg: 'lime',
+                color: 'black',
+              }}
+            >
               Sign Up
             </Button>
           </Stack>

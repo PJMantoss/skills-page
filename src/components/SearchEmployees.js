@@ -64,7 +64,18 @@ export default function SearchEmployees(){
                         onChange={(e) => setQuery(e.target.value)}
                         required
                     />
-                    <Button my='5' type='submit'>Search</Button>
+                    <Button 
+                        my='5' 
+                        type='submit' 
+                        bg={'gray.900'} 
+                        color={'white'}
+                        _hover={{
+                            bg: 'lime',
+                            color: 'black',
+                          }}
+                    >
+                        Search
+                    </Button>
                 </FormControl>
             </form>
             <Box>
