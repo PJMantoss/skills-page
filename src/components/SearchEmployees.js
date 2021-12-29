@@ -5,7 +5,9 @@ import {
     FormControl,
     FormLabel,
     Input,
-    Button
+    Button,
+    VStack,
+    Text
   } from '@chakra-ui/react';
 
 
@@ -15,15 +17,14 @@ export default function SearchEmployees(){
     //state for employees
     const [employees, setEmployees] = useState({});
 
-    //console.log(employee)
+    let employee = Object.values(employees);
 
-    let employee;
-
+    console.log(employee)
 
     const searchEmployee = async (e) => {
         e.preventDefault();
   
-        //const query = 'torrenegra'
+        //const query = 'torrenegra' <EmployeeCard employee={employee} key={employee[0].id} />
 
         const url = `https://boiling-escarpment-68489.herokuapp.com/https://torre.bio/api/bios/${query}`;
 
@@ -31,15 +32,10 @@ export default function SearchEmployees(){
                 const res = await fetch(url);
                 const data = await res.json();
                 console.log(data);
-                setEmployees(data);
+                setEmployees(employee = data);
             }catch(err){
                 console.error(err);
-            }
-
-            employee = Object.keys(employees).map(key => {
-                return employees[key];
-            })
-        
+            }        
     }
 
     return(
@@ -69,7 +65,31 @@ export default function SearchEmployees(){
             </form>
             <Box>
                 {
-                    <EmployeeCard employee={employee} key={employee.id} />
+                    employee.map((employeeVal, index) => (
+                        index === 0 && <EmployeeCard employeeVal={employeeVal} key={index} />
+                    ))
+                }
+                {
+                    employee.map((employeeStrengths, index) => (
+                        index === 2 && 
+                        <VStack>
+                            <Text fontWeight={600}>Skills</Text>
+                            {employeeStrengths.slice(0,8).map(strength => (
+                                <Box 
+                                    p='2' 
+                                    bg='gray.900' 
+                                    color='white' 
+                                    borderRadius='8'
+                                    _hover={{
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: 'lg',
+                                      }}
+                                >
+                                    {strength.name}
+                                </Box>
+                                ))}
+                        </VStack>
+                    ))
                 }
             </Box>
         </>
