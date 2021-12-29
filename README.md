@@ -1,7 +1,5 @@
 # Skills Page with React and Chakra UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Description
 
 A Page that Displays Skills of users
@@ -12,7 +10,7 @@ A Page that Displays Skills of users
 - Torre's Bios API
 
 ### Live Version Link
-[Link](https://github.com/facebook/create-react-app).
+[Link](https://pjmantoss.github.io/skills-page/).
 
 
 ### Date
