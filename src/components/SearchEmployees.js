@@ -15,8 +15,6 @@ export default function SearchEmployees(){
     //state for employees
     const [employees, setEmployees] = useState({});
 
-    const [isLoading, setIsLoading] = useState(false);
-
 
     const searchEmployee = async (e) => {
         e.preventDefault();
@@ -30,7 +28,6 @@ export default function SearchEmployees(){
                 const data = await res.json();
                 console.log(data);
                 setEmployees(data);
-                setIsLoading(false);
             }catch(err){
                 console.error(err);
             }
@@ -69,7 +66,9 @@ export default function SearchEmployees(){
                 </FormControl>
             </form>
             <Box>
-                <EmployeeCard employee={employee} />
+                {
+                    <EmployeeCard employee={employee} key={employee.id} />
+                }
             </Box>
         </>
     )
