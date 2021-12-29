@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/skills-page/static/css/main.87d6e283.css",
+    "main.js": "/skills-page/static/js/main.a77085a3.js",
+    "index.html": "/skills-page/index.html",
+    "main.87d6e283.css.map": "/skills-page/static/css/main.87d6e283.css.map",
+    "main.a77085a3.js.map": "/skills-page/static/js/main.a77085a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87d6e283.css",
+    "static/js/main.a77085a3.js"
+  ]
+}
