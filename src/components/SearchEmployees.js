@@ -15,6 +15,10 @@ export default function SearchEmployees(){
     //state for employees
     const [employees, setEmployees] = useState({});
 
+    //console.log(employee)
+
+    let employee;
+
 
     const searchEmployee = async (e) => {
         e.preventDefault();
@@ -31,14 +35,12 @@ export default function SearchEmployees(){
             }catch(err){
                 console.error(err);
             }
+
+            employee = Object.keys(employees).map(key => {
+                return employees[key];
+            })
         
     }
-
-    let employee = Object.keys(employees).map(key => {
-        return employees[key];
-    })
-
-    console.log(employee)
 
     return(
         <>

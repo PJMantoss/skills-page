@@ -25,13 +25,17 @@ import {
           <Image
             h={'120px'}
             w={'full'}
-            src={employee[0].picture}
+            src={
+              'https://res.cloudinary.com/torre-technologies-co/image/upload/v0/origin/starrgate/users/profile_bd307a3ec329e10a2cff8fb87480823da114f8f4.jpg'
+            }
             objectFit={'cover'}
           />
           <Flex justify={'center'} mt={-12}>
             <Avatar
               size={'xl'}
-              src={employee[0].picture}
+              src={
+                'https://res.cloudinary.com/torre-technologies-co/image/upload/v0/origin/starrgate/users/profile_bd307a3ec329e10a2cff8fb87480823da114f8f4.jpg'
+              }
               alt={'Author'}
               css={{
                 border: '2px solid white',
