@@ -31,7 +31,7 @@ import {
           <Flex justify={'center'} mt={-12}>
             <Avatar
               size={'xl'}
-              src={employeeVal && employeeVal.picture ? employeeVal.picture : "https://i.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o"}
+              src={employeeVal && employeeVal.picture ? employeeVal.picture : "https://i.picsum.photos/id/353/6016/3376.jpg?hmac=nxXyXOzuXlHPPWsAwB2kOv-rQTBz4Brg6u49weMZqOw"}
               alt={'Author'}
               css={{
                 border: '2px solid white',
