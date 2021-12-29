@@ -10,7 +10,7 @@ import {
     StackDivider,
     useMediaQuery
   } from '@chakra-ui/react';
-  import { VStack, Stack, Flex, Spacer } from "@chakra-ui/layout";
+  import { Stack, Flex } from "@chakra-ui/layout";
 
 
 export default function SearchEmployees(){
@@ -19,27 +19,28 @@ export default function SearchEmployees(){
     //state for employees
     const [employees, setEmployees] = useState({});
 
+    //Extract values from the 'employees' object state. It's returned in an array by Object.values()
     let employee = Object.values(employees);
 
-    console.log(employee)
-
+    //Function that handles search queries
     const searchEmployee = async (e) => {
         e.preventDefault();
   
-        //const query = 'torrenegra' <EmployeeCard employee={employee} key={employee[0].id} />
+        //Torre's API
 
         const url = `https://boiling-escarpment-68489.herokuapp.com/https://torre.bio/api/bios/${query}`;
 
             try{
                 const res = await fetch(url);
                 const data = await res.json();
-                console.log(data);
+                //console.log(data);
                 setEmployees(employee = data);
             }catch(err){
                 console.error(err);
             }        
     }
-
+    
+    //Media Query object from Chakra-UI
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
     return(
@@ -79,12 +80,12 @@ export default function SearchEmployees(){
                 </FormControl>
             </form>
             <Box>
-                {
+                {   //Iterate through employee array at index 0 (person object) to obtain names and title
                     employee.map((employeeVal, index) => (
                         index === 0 && <EmployeeCard employeeVal={employeeVal} key={index} />
                     ))
                 }
-                {
+                {   //Iterate through 'employee' array at index 2 (strengths) to obtain skills
                     employee.map((employeeStrengths, index) => (
                         index === 2 && 
                         <Stack
@@ -102,7 +103,7 @@ export default function SearchEmployees(){
                                 align='center'
                                 wrap='wrap'
                             >
-                            {employeeStrengths.slice(0,10).map((strength, index) => (
+                            {employeeStrengths.slice(0,10).map((strength, index) => ( //Iterate and Print up to 10 skills
                                 <Box 
                                     p='2' 
                                     m='2'

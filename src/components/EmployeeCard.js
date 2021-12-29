@@ -8,7 +8,6 @@ import {
     Flex,
     Text,
     Stack,
-    Button,
     useColorModeValue,
   } from '@chakra-ui/react';
   
@@ -24,7 +23,7 @@ import {
           overflow={'hidden'}>
           <Image
             h={'120px'}
-            w={'full'}
+            w={'full'}  //Check existence of image before sending. If it does not exist, used fallback image from picsum
             src={employeeVal && employeeVal.picture ? employeeVal.picture : "https://i.picsum.photos/id/237/3500/2095.jpg?hmac=y2n_cflHFKpQwLOL1SSCtVDqL8NmOnBzEW7LYKZ-z_o"}
             objectFit={'cover'}
           />

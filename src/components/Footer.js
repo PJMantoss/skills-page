@@ -22,7 +22,7 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2021 Torre Lab. All rights reserved</Text>
+          <Text>© 2021 Torre Technologies. All rights reserved</Text>
         </Container>
       </Box>
     );
