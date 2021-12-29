@@ -6,9 +6,11 @@ import {
     FormLabel,
     Input,
     Button,
-    VStack,
-    Text
+    Text,
+    StackDivider,
+    useMediaQuery
   } from '@chakra-ui/react';
+  import { VStack, Stack, Flex, Spacer } from "@chakra-ui/layout";
 
 
 export default function SearchEmployees(){
@@ -37,6 +39,8 @@ export default function SearchEmployees(){
                 console.error(err);
             }        
     }
+
+    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
     return(
         <>
@@ -72,23 +76,39 @@ export default function SearchEmployees(){
                 {
                     employee.map((employeeStrengths, index) => (
                         index === 2 && 
-                        <VStack>
+                        <Stack
+                            divider={<StackDivider borderColor='gray.200' />}
+                            spacing={4}
+                            align={isNotSmallerScreen ? "center" : "stretch"}
+                            justify="center"
+                            m="auto"
+                            width={isNotSmallerScreen ? "600px" : "90%"}
+                        >
                             <Text fontWeight={600}>Skills</Text>
-                            {employeeStrengths.slice(0,8).map(strength => (
+                            <Flex
+                                direction={isNotSmallerScreen ? 'row' : "column"}
+                                justify="center"
+                                align='center'
+                                wrap='wrap'
+                            >
+                            {employeeStrengths.slice(0,10).map((strength, index) => (
                                 <Box 
                                     p='2' 
+                                    m='2'
                                     bg='gray.900' 
                                     color='white' 
                                     borderRadius='8'
                                     _hover={{
-                                        transform: 'translateY(-2px)',
+                                        transform: 'translateX(-2px)',
                                         boxShadow: 'lg',
                                       }}
+                                      key={index}
                                 >
                                     {strength.name}
                                 </Box>
                                 ))}
-                        </VStack>
+                                </Flex>
+                        </Stack>
                     ))
                 }
             </Box>

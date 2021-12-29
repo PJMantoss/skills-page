@@ -16,7 +16,7 @@ import {
     return (
       <Center py={6}>
         <Box
-          maxW={'270px'}
+          maxW={'400px'}
           w={'full'}
           bg={useColorModeValue('white', 'gray.800')}
           boxShadow={'2xl'}
@@ -49,25 +49,13 @@ import {
   
             <Stack direction={'column'} justify={'center'} spacing={6}>
               <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>Summary</Text>
+                <Text fontWeight={600}>Location</Text>
                 <Text fontSize={'sm'} color={'gray.500'}>
-                   {}
+                   {employeeVal.location.name}
                 </Text>
               </Stack>
             </Stack>
-  
-            <Button
-              w={'full'}
-              mt={8}
-              bg={useColorModeValue('#151f21', 'gray.900')}
-              color={'white'}
-              rounded={'md'}
-              _hover={{
-                transform: 'translateY(-2px)',
-                boxShadow: 'lg',
-              }}>
-              Learn More
-            </Button>
+
           </Box>
         </Box>
       </Center>
