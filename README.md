@@ -11,8 +11,9 @@ A Page that Displays Skills of users
 - Chakra UI
 - Torre's Bios API
 
+### Live Version Link
+[Link](https://github.com/facebook/create-react-app).
 
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Date
+December 29, 2021
